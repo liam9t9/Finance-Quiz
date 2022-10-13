@@ -1,0 +1,41 @@
+name = input("What is your name: ") 
+print("Welcome to the course", name + ", let's get started\n")
+Intro = input("Firstly, do you have any accounting experience? ")
+if Intro == "yes":
+	print("Amazing, this test should be easy\n")
+elif Intro == "no":
+	print("No problem, give it your best shot\n")
+topics = ["VAT", "Tax Rates", "National Insurance"]
+print("Today we will cover:")
+print(topics)
+question1 = input("What is the percentage VAT rate in the UK? (Just type the number only):" )
+if question1 == "20":
+    print("Thats right well done!")
+else:
+    print("The answer is '20', not", question1)
+topics.remove( "VAT" )
+print("\nNow we will move on to:")
+print(topics)
+question2 = input("What is not a UK tax rate? (Type 1, 2 or 3)\n(1) 20%,\n(2) 30% or \n(3) 40% ")
+if question2 == "2":
+    print("Thats right well done!\n")
+else:
+    print("The answer is '(2) 30%', not", question2)
+topics.remove( "Tax Rates" )
+print("\nWe will move on now to the last section:")
+print(topics)
+question3 = input("Pensioners over 65 do not pay national insurance, (Type true or false) ")
+while question3 != 'true':
+    print("Sorry please try that again")
+    question3 = input("Pensioners over 65 do not pay national insurance, true or false? ")
+print("\nCongratulations you have completed the quiz")
+print("\nFinal test, what did we not cover today?")
+topics.append("Payroll")
+topics.append("VAT")
+print(topics)
+final = input(" ")
+if final == "payroll" or final == "Payroll":
+    print("Perfect you were paying attention")
+else:
+    print("No worries better luck next time")
+print("\nThank you for taking the quiz")
